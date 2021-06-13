@@ -1,0 +1,33 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+
+  "settings": {
+    "search.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/tmp": true
+    },
+
+    "editor.rulers": [],
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true
+    },
+
+    "[dart]": {
+      "editor.rulers": [],
+      "editor.formatOnSave": true
+    }
+  }
+}

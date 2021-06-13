@@ -4,9 +4,23 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
   @override
   Widget build(Object context) {
+    var questionsIndex = 0;
+
+    void answerQuestion() {
+      questionsIndex += 1;
+      print(questionsIndex);
+    }
+
     var questions = ['questions A', 'question B', 'question c'];
 
     return MaterialApp(
@@ -17,9 +31,11 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Text('A'),
-            ElevatedButton(onPressed: null, child: Text('text1')),
-            ElevatedButton(onPressed: null, child: Text('text2')),
-            ElevatedButton(onPressed: null, child: Text('text3')),
+            ElevatedButton(
+                onPressed: answerQuestion, child: Text(questions.elementAt(0))),
+            ElevatedButton(
+                onPressed: answerQuestion, child: Text(questions[1])),
+            ElevatedButton(onPressed: answerQuestion, child: Text('text3')),
           ],
         ),
       ),
